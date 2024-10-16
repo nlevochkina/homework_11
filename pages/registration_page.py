@@ -6,7 +6,7 @@ from selene import browser, be, have
 class RegistrationPage:
 
     def open_form(self):
-        browser.open('/automation-practice-form')
+        browser.open('https://demoqa.com/automation-practice-form')
 
         browser.driver.execute_script("$('#fixedban').remove()")
         browser.driver.execute_script("$('footer').remove()")
