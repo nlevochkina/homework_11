@@ -75,22 +75,6 @@ class RegistrationPage:
             )
         )
         return self
-    def should_registered_user_with(self, user: User):
-        browser.element('.table').all('td').even.should(
-            have.exact_texts(
-                f'{user.first_name} {user.last_name}',
-                user.email,
-                user.gender,
-                user.phone,
-                f"{user.day} {user.month},{user.year}",
-                user.subject,
-                user.hobbies,
-                user.picture_name,
-                user.address,
-                f"{user.state} {user.city}"
-            )
-        )
-        return self
 
     def register_user(self, user: User):
         self.fill_full_name(user.first_name, user.last_name)

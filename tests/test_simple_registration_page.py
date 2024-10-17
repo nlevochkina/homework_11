@@ -1,6 +1,7 @@
 import allure
 from pages.registration_page import RegistrationPage
 
+
 @allure.title('Заполнение формы регистрации simple')
 def test_simple_fill_out_the_form():
     registration_page = RegistrationPage()
