@@ -2,6 +2,8 @@ import os
 
 from selene import browser, be, have
 
+from data.users import User
+
 
 class RegistrationPage:
 
@@ -72,4 +74,18 @@ class RegistrationPage:
                 select_state_and_city
             )
         )
+        return self
+
+    def register_user(self, user: User):
+        self.fill_full_name(user.first_name, user.last_name)
+        self.fill_email(user.email)
+        self.choose_gender(user.gender)
+        self.fill_phone(user.phone)
+        self.select_date_of_birth(user.day, user.month, user.year)
+        self.fill_subject(user.subject)
+        self.upload_picture(user.picture)
+        self.fill_adress(user.address)
+        self.choose_hobby(user.hobbies)
+        self.select_state_and_city(user.state, user.city)
+        self.submit()
         return self
