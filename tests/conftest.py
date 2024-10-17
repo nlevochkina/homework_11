@@ -24,7 +24,7 @@ def setup_browser():
     browser.config.driver = driver
 
     browser.config.driver_name = "chrome"
-    browser.config.window_height = 1080
+    browser.config.window_height = 1200
     browser.config.window_width = 1920
 
     yield
